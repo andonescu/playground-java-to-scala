@@ -1,4 +1,4 @@
-package main.java;
+package main.java.day1;
 
 /**
  * Created by Ionut on 10.03.2016.
