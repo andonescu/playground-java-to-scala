@@ -19,35 +19,8 @@ public class PlayingWithInts {
         // if isIntersection is `false` then we do union
         boolean isIntersection =  Math.random() > 0.5;
 
-
-        List<Integer> aggregation = new ArrayList<>();
-
-        for (int index = 0; index < data.size(); index++) {
-            List<Integer> newCol = data.get(index);
-
-            if (!isIntersection) {
-                // simple case , we just add the new element to the set
-                aggregation.addAll(newCol);
-            } else {
-                if (index == 0) {
-                    aggregation.addAll(newCol);
-                } else {
-                    for (Iterator<Integer> iter = aggregation.listIterator(); iter.hasNext(); ) {
-                        Integer elem = iter.next();
-                        if (!newCol.contains(elem)) {
-                            // remove the element
-                            iter.remove();
-                        }
-
-                    }
-                }
-
-            }
-        }
-
-        Set<Integer> uniqueItems = new HashSet<>(aggregation);
+        Set<Integer> uniqueItems = IntsProcessor.aggregateInts_01(data, isIntersection);
         System.out.println(Arrays.toString(uniqueItems.toArray()));
-
 
     }
 }
