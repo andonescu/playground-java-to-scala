@@ -1,4 +1,4 @@
-package main.scala.day2
+package scala.day2
 
 /**
   * Created by Ionut on 31.03.2016.

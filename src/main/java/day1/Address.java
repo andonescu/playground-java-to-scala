@@ -1,4 +1,4 @@
-package main.java.day1;
+package java.day1;
 
 import java.util.Optional;
 
