@@ -1,0 +1,7 @@
+val l: Either[String, Int] = Left("flower")
+val r: Either[String, Int] = Right(12)
+l.left // Left("flower")
+l.left.map(_.size) // Left(6)
+r.left.map(_.size) // Right(12)
+l.right.map(_.toDouble) // Left("flower")
+r.right.map(_.toDouble) // Right(12.0)
